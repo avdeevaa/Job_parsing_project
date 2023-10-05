@@ -160,5 +160,7 @@ cython_debug/
 .idea/
 
 src/try.py
+src/working_try.py
+src/try_secondo_stupido.py
 
 pyproject.toml
