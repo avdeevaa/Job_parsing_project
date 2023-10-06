@@ -28,7 +28,7 @@ class GetAPIhh(GetAPI):
         self.keyword = keyword
         #url = 'https://api.hh.ru/'
         endpoint = 'vacancies'
-        params = {'text': {self.keyword}, 'per_page': 1}
+        params = {'text': {self.keyword}, 'per_page': 5}
 
         response = requests.get(f'{self.web_url}{endpoint}', params=params)
         result = response.json()
@@ -37,7 +37,7 @@ class GetAPIhh(GetAPI):
 d = GetAPIhh('https://api.hh.ru/') # check code
 #print(d.get_information_via_API("разработчик")) # check code
 
-s = d.get_information_via_API("программист")
+s = d.get_information_via_API("повар")
 
 
 
@@ -71,10 +71,11 @@ b = GetAPIsuperjob("https://api.superjob.ru/2.0/vacancies/") # check code
 k = b.get_information_via_API("разработчик")
 
 
+
 #### PART 2
 
 
-class Vacancy:
+class Vacancy: ### POSSIBLY IT WILL WORK ONLY WITH HH!!!
 
    def __init__(self, name, url, requirements, salary_from="не указано", salary_to="не указано", salary_currency="не указано"):
       self.name = name
@@ -120,4 +121,91 @@ class Vacancy:
 # b = vacancy.comparision(vacancy1) # for check
 # print(b) # also for check
 #
+
+
+class Abstract_file_handler(ABC):
+    """создаем абстрактный класс для добавления в файл, удаления и получения информации о вакансиях"""
+
+    @abstractmethod
+    def add_vacancy(self, name):
+        pass
+
+    @abstractmethod
+    def get_vacancies_by_salary(self, salary_from):
+        self.salary_from = salary_from
+
+    @abstractmethod
+    def delete_vacancy(self, name):
+        pass
+
+
+class Vacancy_to_JSON(Abstract_file_handler):
+
+    def __init__(self, file_name): #я так предполагаю, что мы будем инициализироваться по будущему имени вк
+        self.file_name = file_name
+
+
+    def add_vacancy(self, name):
+        self.name = name # тут мы записываем все вакансии в файл, а не по одной
+        with open(self.file_name, 'w', encoding='utf-8') as file:
+            json.dump(self.name, file, ensure_ascii=False, indent=4)
+
+
+    def delete_vacancy(self, name):
+
+        """тут мы хотим удалить вакансию по её названию"""
+        with open(self.file_name, 'r', encoding='utf-8') as file:
+            data = json.load(file) # открываем файл
+
+        new_vac_list = []
+        for del_vacancy in data['items']:
+            if del_vacancy['name'] == name:
+                pass
+            else:
+                new_vac_list.append(del_vacancy)
+
+        with open(self.file_name, 'w', encoding='utf-8') as file:
+            json.dump({"items": new_vac_list}, file, ensure_ascii=False, indent=4) # типо мы тут удаляем вакансию и перезаписываем файл
+
+
+    def get_vacancies_by_salary(self, salary_from):
+        #self.salary_from = salary_from
+        with open(self.file_name, 'r', encoding='utf-8') as file:
+            data = json.load(file) # открываем файл
+
+        my_vac_list = []
+        for v in data['items']:
+            if v['salary']['from'] == int(salary_from):
+                my_vac_list.append(v)
+
+        with open(self.file_name, 'w', encoding='utf-8') as file:
+            fin_vac = json.dump({"items": my_vac_list}, file, ensure_ascii=False, indent=4) #опять перезаписываем
+
+            self.fin_vac = fin_vac
+
+
+    # def print_fin_vacancies(self): #this shit doesn't work, but I don't know why...
+    #
+    #     for vacancy in self.fin_vac['items']:
+    #         name = vacancy['name']
+    #         city = vacancy['area']['name']
+    #         salary = vacancy['salary']['from']
+    #         url = vacancy['url']
+    #         resp = vacancy['responsibilities']
+    #         print(f'По вашим требованиям мы нашли следующие вакансии:\nНазвание {name}\nГород {city}\nЗарплата от {salary}\nСсылка на вакансию {url}\nТребования {resp}')
+    #
+
+
+#check code
+
+#from src.code import GetAPIhh, s
+
+#vac = Vacancy_to_JSON('filename.json')
+#vac.add_vacancy(s) # add vacancy thanks god works, and it looks beautiful, amazing!
+
+#vac.delete_vacancy("Повар Универсал")
+#vac.delete_vacancy("Шеф-повар") # It works! Amazing!
+
+#vac.get_vacancies_by_salary(30000) # It works! Amazing!
+
 
