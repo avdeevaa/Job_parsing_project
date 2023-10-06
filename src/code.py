@@ -75,7 +75,7 @@ k = b.get_information_via_API("разработчик")
 #### PART 2
 
 
-class Vacancy: ### POSSIBLY IT WILL WORK ONLY WITH HH!!!
+class Vacancy:
 
    def __init__(self, name, url, requirements, salary_from="не указано", salary_to="не указано", salary_currency="не указано"):
       self.name = name
@@ -102,9 +102,9 @@ class Vacancy: ### POSSIBLY IT WILL WORK ONLY WITH HH!!!
       """метод для операции по зарплате"""
       if self.salary_currency != other.salary_currency:
          return f"Вакансии нельзя сравнить, разная валюта."
-      elif self.salary_from == "не указано" or other.salary_from == "не указано":
+      elif self.salary_from == "не указано" or other.salary_from == "не указано" or self.salary_from == 0 or other.salary_from == 0:
          return f"Вакансии нельзя сравнить, зарплата не указана."
-      elif self.salary_to == "не указано" or other.salary_to == "не указано":
+      elif self.salary_to == "не указано" or other.salary_to == "не указано" or self.salary_to == 0 or other.salary_to == 0:
          return f"Вакансии нельзя сравнить, зарплата не указана."
 
 
@@ -183,17 +183,6 @@ class Vacancy_to_JSON(Abstract_file_handler):
 
             self.fin_vac = fin_vac
 
-
-    # def print_fin_vacancies(self): #this shit doesn't work, but I don't know why...
-    #
-    #     for vacancy in self.fin_vac['items']:
-    #         name = vacancy['name']
-    #         city = vacancy['area']['name']
-    #         salary = vacancy['salary']['from']
-    #         url = vacancy['url']
-    #         resp = vacancy['responsibilities']
-    #         print(f'По вашим требованиям мы нашли следующие вакансии:\nНазвание {name}\nГород {city}\nЗарплата от {salary}\nСсылка на вакансию {url}\nТребования {resp}')
-    #
 
 
 #check code
