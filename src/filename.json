@@ -1,0 +1,470 @@
+{
+    "items": [
+        {
+            "id": "86951485",
+            "premium": false,
+            "name": "Повар Универсал",
+            "department": null,
+            "has_test": false,
+            "response_letter_required": false,
+            "area": {
+                "id": "1186",
+                "name": "Удачный",
+                "url": "https://api.hh.ru/areas/1186"
+            },
+            "salary": {
+                "from": 70000,
+                "to": null,
+                "currency": "RUR",
+                "gross": false
+            },
+            "type": {
+                "id": "open",
+                "name": "Открытая"
+            },
+            "address": {
+                "city": "Удачный",
+                "street": null,
+                "building": null,
+                "lat": 66.406995,
+                "lng": 112.306362,
+                "description": null,
+                "raw": "Удачный",
+                "metro": null,
+                "metro_stations": [],
+                "id": "720100"
+            },
+            "response_url": null,
+            "sort_point_distance": null,
+            "published_at": "2023-09-20T07:27:51+0300",
+            "created_at": "2023-09-20T07:27:51+0300",
+            "archived": false,
+            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=86951485",
+            "show_logo_in_search": null,
+            "insider_interview": null,
+            "url": "https://api.hh.ru/vacancies/86951485?host=hh.ru",
+            "alternate_url": "https://hh.ru/vacancy/86951485",
+            "relations": [],
+            "employer": {
+                "id": "2582704",
+                "name": "Татьяна",
+                "url": "https://api.hh.ru/employers/2582704",
+                "alternate_url": "https://hh.ru/employer/2582704",
+                "logo_urls": {
+                    "90": "https://hhcdn.ru/employer-logo/2101046.png",
+                    "original": "https://hhcdn.ru/employer-logo-original/414743.gif",
+                    "240": "https://hhcdn.ru/employer-logo/2101047.png"
+                },
+                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=2582704",
+                "accredited_it_employer": false,
+                "trusted": true
+            },
+            "snippet": {
+                "requirement": "Опыт работы <highlighttext>Поваром</highlighttext> не менее 3 лет. Знание всех участков работы. Хорошо развитые коммуникативные и командные качества. Креативность и любовь...",
+                "responsibility": "Приготовление первых и вторых блюд, горячих закусок и нарезок. Приготовление десертов, салатов, холодных блюд и закусок. Творческая работа - оформление блюд..."
+            },
+            "contacts": null,
+            "schedule": {
+                "id": "fullDay",
+                "name": "Полный день"
+            },
+            "working_days": [],
+            "working_time_intervals": [],
+            "working_time_modes": [],
+            "accept_temporary": false,
+            "professional_roles": [
+                {
+                    "id": "94",
+                    "name": "Повар, пекарь, кондитер"
+                }
+            ],
+            "accept_incomplete_resumes": true,
+            "experience": {
+                "id": "between3And6",
+                "name": "От 3 до 6 лет"
+            },
+            "employment": {
+                "id": "full",
+                "name": "Полная занятость"
+            },
+            "adv_response_url": null,
+            "is_adv_vacancy": false
+        },
+        {
+            "id": "87804737",
+            "premium": false,
+            "name": "Шеф-повар/Бренд-Шеф",
+            "department": null,
+            "has_test": false,
+            "response_letter_required": false,
+            "area": {
+                "id": "1",
+                "name": "Москва",
+                "url": "https://api.hh.ru/areas/1"
+            },
+            "salary": {
+                "from": 200000,
+                "to": 250000,
+                "currency": "RUR",
+                "gross": false
+            },
+            "type": {
+                "id": "open",
+                "name": "Открытая"
+            },
+            "address": {
+                "city": "Москва",
+                "street": "Люблинско-Дмитровская линия",
+                "building": "метро Братиславская",
+                "lat": 55.659647,
+                "lng": 37.750739,
+                "description": null,
+                "raw": "Москва, Люблинско-Дмитровская линия, метро Братиславская",
+                "metro": null,
+                "metro_stations": [],
+                "id": "14400774"
+            },
+            "response_url": null,
+            "sort_point_distance": null,
+            "published_at": "2023-10-05T23:15:47+0300",
+            "created_at": "2023-10-05T23:15:47+0300",
+            "archived": false,
+            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=87804737",
+            "insider_interview": null,
+            "url": "https://api.hh.ru/vacancies/87804737?host=hh.ru",
+            "alternate_url": "https://hh.ru/vacancy/87804737",
+            "relations": [],
+            "employer": {
+                "id": "9456965",
+                "name": "Сома",
+                "url": "https://api.hh.ru/employers/9456965",
+                "alternate_url": "https://hh.ru/employer/9456965",
+                "logo_urls": null,
+                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=9456965",
+                "accredited_it_employer": false,
+                "trusted": true
+            },
+            "snippet": {
+                "requirement": "Качество выше грандов в среднем сегменте. По внешнему виду, по вкусу и подаче. От вас потребуются: Опыт в работе на...",
+                "responsibility": "Разработать меню и всего, что сопутствует (тех карты, тех процессы итд). Меню хотим сделать не раздутое, группа А + обязательные..."
+            },
+            "contacts": null,
+            "schedule": {
+                "id": "fullDay",
+                "name": "Полный день"
+            },
+            "working_days": [],
+            "working_time_intervals": [],
+            "working_time_modes": [],
+            "accept_temporary": false,
+            "professional_roles": [
+                {
+                    "id": "94",
+                    "name": "Повар, пекарь, кондитер"
+                }
+            ],
+            "accept_incomplete_resumes": true,
+            "experience": {
+                "id": "between1And3",
+                "name": "От 1 года до 3 лет"
+            },
+            "employment": {
+                "id": "full",
+                "name": "Полная занятость"
+            },
+            "adv_response_url": null,
+            "is_adv_vacancy": false
+        },
+        {
+            "id": "86655789",
+            "premium": false,
+            "name": "Продавец-консультант / Продавец-кассир",
+            "department": null,
+            "has_test": false,
+            "response_letter_required": false,
+            "area": {
+                "id": "1",
+                "name": "Москва",
+                "url": "https://api.hh.ru/areas/1"
+            },
+            "salary": {
+                "from": 40000,
+                "to": 50000,
+                "currency": "RUR",
+                "gross": false
+            },
+            "type": {
+                "id": "open",
+                "name": "Открытая"
+            },
+            "address": null,
+            "response_url": null,
+            "sort_point_distance": null,
+            "published_at": "2023-09-13T11:14:00+0300",
+            "created_at": "2023-09-13T11:14:00+0300",
+            "archived": false,
+            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=86655789",
+            "show_logo_in_search": null,
+            "insider_interview": null,
+            "url": "https://api.hh.ru/vacancies/86655789?host=hh.ru",
+            "alternate_url": "https://hh.ru/vacancy/86655789",
+            "relations": [],
+            "employer": {
+                "id": "2756417",
+                "name": "МИЛТИ",
+                "url": "https://api.hh.ru/employers/2756417",
+                "alternate_url": "https://hh.ru/employer/2756417",
+                "logo_urls": {
+                    "240": "https://hhcdn.ru/employer-logo/3733484.jpeg",
+                    "90": "https://hhcdn.ru/employer-logo/3733483.jpeg",
+                    "original": "https://hhcdn.ru/employer-logo-original/823149.JPG"
+                },
+                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=2756417",
+                "accredited_it_employer": false,
+                "trusted": true
+            },
+            "snippet": {
+                "requirement": "Любовь к людям и умение расположить к себе. Готовность быстро обучаться.",
+                "responsibility": "Консультировать покупателей по продукции МИЛТИ. Работать с кассой, заниматься выкладкой товаров. Следить за качеством и контролировать сроки годности продукции. "
+            },
+            "contacts": null,
+            "schedule": {
+                "id": "fullDay",
+                "name": "Полный день"
+            },
+            "working_days": [],
+            "working_time_intervals": [],
+            "working_time_modes": [],
+            "accept_temporary": false,
+            "professional_roles": [
+                {
+                    "id": "97",
+                    "name": "Продавец-консультант, продавец-кассир"
+                }
+            ],
+            "accept_incomplete_resumes": true,
+            "experience": {
+                "id": "noExperience",
+                "name": "Нет опыта"
+            },
+            "employment": {
+                "id": "full",
+                "name": "Полная занятость"
+            },
+            "adv_response_url": null,
+            "is_adv_vacancy": false
+        },
+        {
+            "id": "87027302",
+            "premium": false,
+            "name": "Пекарь",
+            "department": null,
+            "has_test": false,
+            "response_letter_required": false,
+            "area": {
+                "id": "3",
+                "name": "Екатеринбург",
+                "url": "https://api.hh.ru/areas/3"
+            },
+            "salary": {
+                "from": 45000,
+                "to": null,
+                "currency": "RUR",
+                "gross": false
+            },
+            "type": {
+                "id": "open",
+                "name": "Открытая"
+            },
+            "address": {
+                "city": "Екатеринбург",
+                "street": "Орджоникидзевский район, микрорайон Эльмаш, улица Войкова",
+                "building": "11",
+                "lat": 56.895919,
+                "lng": 60.617192,
+                "description": null,
+                "raw": "Екатеринбург, Орджоникидзевский район, микрорайон Эльмаш, улица Войкова, 11",
+                "metro": {
+                    "station_name": "Проспект Космонавтов",
+                    "line_name": "Север-Юг",
+                    "station_id": "48.261",
+                    "line_id": "48",
+                    "lat": 56.900393,
+                    "lng": 60.613878
+                },
+                "metro_stations": [
+                    {
+                        "station_name": "Проспект Космонавтов",
+                        "line_name": "Север-Юг",
+                        "station_id": "48.261",
+                        "line_id": "48",
+                        "lat": 56.900393,
+                        "lng": 60.613878
+                    },
+                    {
+                        "station_name": "Уралмаш",
+                        "line_name": "Север-Юг",
+                        "station_id": "48.262",
+                        "line_id": "48",
+                        "lat": 56.887674,
+                        "lng": 60.614165
+                    }
+                ],
+                "id": "6904183"
+            },
+            "response_url": null,
+            "sort_point_distance": null,
+            "published_at": "2023-09-20T16:50:07+0300",
+            "created_at": "2023-09-20T16:50:07+0300",
+            "archived": false,
+            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=87027302",
+            "branding": {
+                "type": "CONSTRUCTOR",
+                "tariff": "BASIC"
+            },
+            "show_logo_in_search": true,
+            "insider_interview": null,
+            "url": "https://api.hh.ru/vacancies/87027302?host=hh.ru",
+            "alternate_url": "https://hh.ru/vacancy/87027302",
+            "relations": [],
+            "employer": {
+                "id": "5052080",
+                "name": "СЛОЙ",
+                "url": "https://api.hh.ru/employers/5052080",
+                "alternate_url": "https://hh.ru/employer/5052080",
+                "logo_urls": {
+                    "original": "https://hhcdn.ru/employer-logo-original/1025256.png",
+                    "240": "https://hhcdn.ru/employer-logo/5721793.png",
+                    "90": "https://hhcdn.ru/employer-logo/5721792.png"
+                },
+                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5052080",
+                "accredited_it_employer": false,
+                "trusted": true
+            },
+            "snippet": {
+                "requirement": "У вас есть медицинская книжка или готовность её оформить. — Опыт работы с тестом.",
+                "responsibility": "Формовка заготовок слоеных изделий в соответствии с ТТК. — Выпечка и начинение изделий из слоеного теста. — Поддержание чистоты и порядка на..."
+            },
+            "contacts": null,
+            "schedule": {
+                "id": "fullDay",
+                "name": "Полный день"
+            },
+            "working_days": [],
+            "working_time_intervals": [],
+            "working_time_modes": [],
+            "accept_temporary": false,
+            "professional_roles": [
+                {
+                    "id": "94",
+                    "name": "Повар, пекарь, кондитер"
+                }
+            ],
+            "accept_incomplete_resumes": true,
+            "experience": {
+                "id": "noExperience",
+                "name": "Нет опыта"
+            },
+            "employment": {
+                "id": "full",
+                "name": "Полная занятость"
+            },
+            "adv_response_url": null,
+            "is_adv_vacancy": false
+        },
+        {
+            "id": "86774586",
+            "premium": false,
+            "name": "Повар ресторана",
+            "department": null,
+            "has_test": false,
+            "response_letter_required": false,
+            "area": {
+                "id": "1002",
+                "name": "Минск",
+                "url": "https://api.hh.ru/areas/1002"
+            },
+            "salary": {
+                "from": null,
+                "to": 1500,
+                "currency": "BYR",
+                "gross": false
+            },
+            "type": {
+                "id": "open",
+                "name": "Открытая"
+            },
+            "address": {
+                "city": "Минский район",
+                "street": null,
+                "building": null,
+                "lat": 53.80681437903099,
+                "lng": 27.52805229150692,
+                "description": null,
+                "raw": "Минский район",
+                "metro": null,
+                "metro_stations": [],
+                "id": "1948235"
+            },
+            "response_url": null,
+            "sort_point_distance": null,
+            "published_at": "2023-09-15T13:01:40+0300",
+            "created_at": "2023-09-15T13:01:40+0300",
+            "archived": false,
+            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=86774586",
+            "insider_interview": null,
+            "url": "https://api.hh.ru/vacancies/86774586?host=hh.ru",
+            "alternate_url": "https://hh.ru/vacancy/86774586",
+            "relations": [],
+            "employer": {
+                "id": "2905597",
+                "name": "Слуцкий Шлях",
+                "url": "https://api.hh.ru/employers/2905597",
+                "alternate_url": "https://hh.ru/employer/2905597",
+                "logo_urls": null,
+                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=2905597",
+                "accredited_it_employer": false,
+                "trusted": true
+            },
+            "snippet": {
+                "requirement": "Действующая справка. Опыт работы от года.",
+                "responsibility": "Приготовление блюд по рецептурам. Поддержание чистоты и порядка на рабочем месте. Участие в переучетах и сан.днях."
+            },
+            "contacts": null,
+            "schedule": {
+                "id": "fullDay",
+                "name": "Полный день"
+            },
+            "working_days": [],
+            "working_time_intervals": [],
+            "working_time_modes": [],
+            "accept_temporary": false,
+            "professional_roles": [
+                {
+                    "id": "94",
+                    "name": "Повар, пекарь, кондитер"
+                }
+            ],
+            "accept_incomplete_resumes": true,
+            "experience": {
+                "id": "between1And3",
+                "name": "От 1 года до 3 лет"
+            },
+            "employment": {
+                "id": "full",
+                "name": "Полная занятость"
+            },
+            "adv_response_url": null,
+            "is_adv_vacancy": false
+        }
+    ],
+    "found": 32255,
+    "pages": 400,
+    "per_page": 5,
+    "page": 0,
+    "clusters": null,
+    "arguments": null,
+    "fixes": null,
+    "suggests": null,
+    "alternate_url": "https://hh.ru/search/vacancy?enable_snippets=true&items_on_page=5&text=%D0%BF%D0%BE%D0%B2%D0%B0%D1%80"
+}
