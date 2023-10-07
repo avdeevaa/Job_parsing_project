@@ -3,7 +3,7 @@ import json
 
 
 def open_json(file_name):
-    """функция помощник для открытия файла json"""
+    """Функция помощник для открытия файла json"""
     with open(file_name, 'r', encoding='utf-8') as file:
         data = json.load(file)
         return data
@@ -12,8 +12,7 @@ def open_json(file_name):
 def user_interaction():
     print("Привет! Сегодня будем искать подходящие вакансии. У нас есть две платформы: HeadHunter и SuperJob. \nНа какой платформе ты хочешь искать?")
     platform = input().lower()
-    #platform_url = 0
-    #chosen_platform = 0
+
     if platform == "HeadHunter".lower():
         print("Отлично, будем искать на HeadHunter!")
         platform_url = 'https://api.hh.ru/'
@@ -103,7 +102,7 @@ def user_interaction():
             currency = vacancy['currency']
             if currency == None or currency == 0:
                 currency = "не указано"
-            url = vacancy['client']['link']
+            url = vacancy['link']
             responsibilities = vacancy['candidat']
 
             print(f"Название: {name}\nГород: {city}\nЗарплата от: {salary_from} до {salary_to} в валюте {currency}.")
@@ -120,12 +119,12 @@ def user_interaction():
             vacancy_found = False
             for vacancy in data['objects']:
                 if vacancy1 == vacancy['profession']:
-                    class_vacancy1 = Vacancy(vacancy1, vacancy['client']['link'], vacancy['candidat'],
+                    class_vacancy1 = Vacancy(vacancy1, vacancy['link'], vacancy['candidat'],
                                              vacancy['payment_from'], vacancy['payment_to'],
                                              vacancy['currency'])
                     vacancy_found = True
                 elif vacancy2 == vacancy['profession']:
-                    class_vacancy2 = Vacancy(vacancy1, vacancy['client']['link'], vacancy['candidat'],
+                    class_vacancy2 = Vacancy(vacancy1, vacancy['link'], vacancy['candidat'],
                                              vacancy['payment_from'], vacancy['payment_to'],
                                              vacancy['currency'])
                     vacancy_found = True
