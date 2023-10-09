@@ -18,24 +18,35 @@ def user_interaction():
         platform_url = 'https://api.hh.ru/'
         chosen_platform = GetAPIhh(platform_url)
         keyword_input = input("Введите ключевое слово, по которому будем искать подходящие вакансии: ")
-        api = chosen_platform.get_information_via_API(keyword_input) # here we first found API file!
+        api = chosen_platform.get_information_via_API(keyword_input)  # here we first found API file!
         to_json = Vacancy_to_JSON("filename.json")
-        all_vac = to_json.add_vacancy(api) #finally we write all Vac to JSON
+        all_vac = to_json.add_vacancy(api)  # finally we write all Vac to JSON
 
         data = open_json("filename.json")
         print("Вот вакансии подходящие для вас: \n")
         for vacancy in data['items']:
             name = vacancy['name']
             city = vacancy['area']['name']
-            salary_from = vacancy['salary']['from']
-            if salary_from == None:
-                salary_from = "не указано"
-            salary_to = vacancy['salary']['to']
-            if salary_to == None:
-                salary_to="не указано"
-            currency = vacancy['salary']['currency']
-            if currency == None:
-                currency="не указано"
+            try:
+                salary_from = vacancy['salary']['from']
+
+                if salary_from is None:
+                    salary_from = "не указано"
+            except TypeError:
+                continue
+
+            try:
+                salary_to = vacancy['salary']['to']
+                if salary_to is None:
+                    salary_to = "не указано"
+            except TypeError:
+                continue
+            try:
+                currency = vacancy['salary']['currency']
+                if currency is None:
+                    currency = "не указано"
+            except TypeError:
+                continue
             url = vacancy['url']
             responsibilities = vacancy['snippet']['responsibility']
 
@@ -94,13 +105,14 @@ def user_interaction():
             name = vacancy['profession']
             city = vacancy['address']
             salary_from = vacancy['payment_from']
-            if salary_from == None or salary_from == 0:
+
+            if salary_from is None or salary_from == 0:
                 salary_from = "не указано"
             salary_to = vacancy['payment_to']
-            if salary_to == None or salary_to == 0:
+            if salary_to is None or salary_to == 0:
                 salary_to = "не указано"
             currency = vacancy['currency']
-            if currency == None or currency == 0:
+            if currency is None or currency == 0:
                 currency = "не указано"
             url = vacancy['link']
             responsibilities = vacancy['candidat']

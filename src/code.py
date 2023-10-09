@@ -19,7 +19,7 @@ class GetAPI(ABC):
 
 
 class GetAPIhh(GetAPI):
-    """Получаем вакансии из сайта HeadHunter по ключ. слову, инициализируем по ссылке"""
+    """Получаем вакансии из сайта HeadHunter по ключ слову, инициализируем по ссылке"""
 
     def __init__(self, web_url):
         super().__init__(web_url)
@@ -84,6 +84,20 @@ class Vacancy:
 Предлагаемая зарплата в размере от {self.salary_from} до {self.salary_to} в валюте {self.salary_currency}.
 Требования: {self.requirements}"""
 
+    def __repr__(self):
+        return f"""Вакансия {self.name} с зарплатой размере от {self.salary_from} до {self.salary_to} в валюте {self.salary_currency}
+имеет такие требования: {self.requirements}"""
+
+    def __lt__(self, other):
+        """Метод для операции сравнения «меньше»"""
+        if self.salary_from < other.salary_from:
+            return f"Вакансия {other.name} имеет меньшую зарплату."
+
+    def __gt__(self, other):
+        """Метод для операции сравнения «больше»"""
+        if self.salary_from > other.salary_from:
+            return f"Вакансия {self.name} имеет большую зарплату."
+
     def comparision(self, other):
         """Метод для сравнения вакансий по зарплате"""
         if self.salary_currency != other.salary_currency:
@@ -101,15 +115,15 @@ class Vacancy:
             return f'Вакансия {other.name} имеет зарплату больше чем вакансия {self.name}.\nВакансия {other.name} предлагает зарплату от {other.salary_from} до {other.salary_to} в валюте {other.salary_currency}'
 
 
-# vacancy = Vacancy("Python Developer", "<https://hh.ru/vacancy/123456>", "Требования: опыт работы от 3 лет...", "не указано", "15000", "RUB")
+# vacancy = Vacancy("Python Developer", "<https://hh.ru/vacancy/123456>", "Требования: опыт работы от 3 лет...", "10000", "15000", "RUB")
 # vacancy1 = Vacancy("Developer", "<https://hh.ru/vacancy/123456>", "Требования: опыт работы от 3 лет...", "70000", "80000", "RUB")
-#
+# print(vacancy1 > vacancy)
 # b = vacancy.comparision(vacancy1) # for check
 # print(b) # also for check
 #
 
 
-class Abstract_file_handler(ABC):
+class AbstractFileHandler(ABC):
     """Создаем абстрактный класс для добавления в файл, удаления и получения информации о вакансиях"""
 
     @abstractmethod
@@ -125,7 +139,7 @@ class Abstract_file_handler(ABC):
         pass
 
 
-class Vacancy_to_JSON(Abstract_file_handler):
+class Vacancy_to_JSON(AbstractFileHandler):
     """Класс реализует методы добавления в файл, удаления вакансии и получения вакансии по зарплате."""
 
     def __init__(self, file_name): #инициализируемся по имени файла
@@ -142,7 +156,7 @@ class Vacancy_to_JSON(Abstract_file_handler):
         """Тут мы хотим удалить вакансию по её
         названию"""
         with open(self.file_name, 'r', encoding='utf-8') as file:
-            data = json.load(file) # открываем файл
+            data = json.load(file)  # открываем файл
 
         new_vac_list = []
         for del_vacancy in data['items']:
@@ -152,7 +166,7 @@ class Vacancy_to_JSON(Abstract_file_handler):
                 new_vac_list.append(del_vacancy)
 
         with open(self.file_name, 'w', encoding='utf-8') as file:
-            json.dump({"items": new_vac_list}, file, ensure_ascii=False, indent=4) # типо мы тут удаляем вакансию и перезаписываем файл
+            json.dump({"items": new_vac_list}, file, ensure_ascii=False, indent=4)  # мы тут удаляем вакансию и перезаписываем файл
 
 
     def get_vacancies_by_salary(self, salary_from):
